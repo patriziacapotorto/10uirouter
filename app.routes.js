@@ -5,8 +5,13 @@ angular.module('app').config(function($stateProvider){
     templateUrl:'home/home.template.html',
     controller: 'HomeCtr',
     data:{
-      titolo: 'questa è la home page'
+    titolo: 'Lista degli amici'
     }
+  })
+  .state('home.dettaglio',{
+    url:'/dettaglio:id',
+    templateUrl:'home/home.dettaglio.html',
+    controller: 'dettaglioCtrl'
   })
   .state('contatti', {
     url:'/contatti',
@@ -24,6 +29,7 @@ angular.module('app').config(function($stateProvider){
         }
   })
   .state('chisiamo', {
+    abstract: true,
     url:'/chisiamo',
     templateUrl:'chisiamo/chisiamo.template.html',
     controller: 'ChisiamoCtr'
