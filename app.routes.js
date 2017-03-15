@@ -27,5 +27,15 @@ angular.module('app').config(function($stateProvider){
     url:'/chisiamo',
     templateUrl:'chisiamo/chisiamo.template.html',
     controller: 'ChisiamoCtr'
-  });
+  })
+  .state( 'chisiamo.about', {
+    url:'/about',
+    templateUrl:'chisiamo/chisiamo.about.html',
+    // controller: 'ChisiamoCtr'
+  })
+  .state( 'chisiamo.mission', {
+    url:'/mission',
+    templateUrl:'chisiamo/chisiamo.mission.html',
+    // controller: 'ChisiamoCtr'
+  })
 });
