@@ -18,6 +18,7 @@ angular.module('app')
 						nome: "Bob"
 					}]
 				},
+
 				controller: 'ContattiCtrl'
 
 			})
@@ -31,6 +32,18 @@ angular.module('app')
 			})
 			.state('about', {
 				url: '/about',
-				templateUrl: 'about/about.template.html'
+				templateUrl: 'about/about.template.html',
+				controller: 'AboutCtrl',
+				resolve: {
+					prova: function ($timeout) {
+						return $timeout(function () {
+							return "questa è una prova"
+						}, 1000)
+					},
+				},
+				informazioni: {
+					nome: "Paolo",
+					cognome: "Calvaresi",
+				}
 			});
 	});
